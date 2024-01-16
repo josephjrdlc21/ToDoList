@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    height: 100vh;
+    background: linear-gradient(#00b386, #004d39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.short-msg-alert{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 50px;
+    background-color: #002233;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.short-msg-alert > div{
+    color: white;
+    margin-left: 20px;
+}
+
+.short-msg-alert .short-msg-alert-icon{
+    border-radius: 100%;
+    background-color: black;
+    padding: 7px 4px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.short-msg-alert .short-msg-alert-icon:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn-short-msg-alert{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 50px;
+}
+
+.btn-short-msg-alert > button{
+    background-color: #005580;
+    padding: 5px 15px;
+    text-align: center;
+    color: white;
+    font-weight: 2em;
+    border: 1px solid #004466;
+}
+
+.btn-short-msg-alert > button:hover{
+    background-color: #004466;
+}
+
+.main{
+    width: 960px;
+    height: 560px;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.title{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.card {
+    width: 66%;
+    background-color: #fff;
+    border-radius: 1px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.card nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card nav ul li{
+    margin: 0 5px;
+}
+
+.card nav{
+    width: 100%;
+    background: #f2f2f2;
+    padding: 10px 2px;
+}
+
+.card .total-task {
+    background-color: #1976D2;
+    color: white;
+    border-radius: 20px;
+    padding: 4px 3px;
+    padding-left: 10px
+}
+.card .total {
+    border-radius: 100%;
+    background-color: white;
+    color: #1976D2;
+    padding: 4px 8px;
+}
+.icon-button {
+    cursor: pointer !important;
+    padding: 4px 8px;
+    border: none;
+    background-color: #f44336; /* Vuetify's primary color */
+    color: white;
+}
+
+#delete-done-task:hover{
+    background-color: #d32f2f;
+}
+
+#delete-all-done-task:hover{
+    background-color: #d32f2f;
+}
+
+.card .tasklist{
+    height: 250px;
+    width: 100%;
+    padding: 15px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #bfbfbf #f0f0f0;
+    &::-webkit-scrollbar {
+        width: 9px;
+        height: 12px;
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #bfbfbf;
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f0f0f0;
+    }
+}
+
+.card .tasklist .task{
+    border: 1px solid #bfbfbf;
+    border-radius: 8px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    padding: 2px 20px;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.card .tasklist .task:hover {
+    background-color: #f2f2f2;
+}
+
+.card .tasklist .task .single-task{
+    display: flex;
+    justify-content: space-between;
+}
+
+#icon-point .v-btn__content{
+    cursor: pointer !important;
+}
+
+.card .tasklist .task .single-task p{
+    margin: 0 15px;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+.card .addtask{
+    width: 100%;
+    background: #f2f2f2;
+    padding: 17px 20px;
+    height: 80px;
+}
+
+.card .input-container{
+    position: relative;
+}
+
+.card input[type="text"] {
+    border: 3px solid #1976D2;
+    padding: 8px 13px;
+    color: #1976D2;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.card input[type="text"]:focus {
+    outline: none;
+    border-color: #1976D2;
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.5);
+}
+
+.card .input-container .input-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    padding: 4px 4px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: #1976D2;
+    border-radius: 100%;
+    color: white;
+}
+
+.card .input-container .input-icon:hover{
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.5);
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: 70%;
+    }
+}
+@media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .card {
+        width: 100%;
+    }
+
+    .card nav ul li button{
+        font-size: 14px;
+    }
+}
